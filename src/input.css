@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+    @apply font-['DM_Sans']
+}
+
+@keyframes ticker {
+    to{
+        transform: translate(calc(-100% - 40px));
+    }
+    
+}
+
+.ticker-group{
+    -webkit-mask:  linear-gradient( 90deg, transparent,white 10%, white 90%, transparent);
+    mask:  linear-gradient( 90deg, transparent,white 20%, white 80%, transparent);
+    --gap: 40px;
+    gap: var(--gap) ;
+    background: linear-gradient(129.69deg, #3dfca948 0%, #e6f51489 47%, #fea1016f 100%);
+}
+
+.ticker{    
+    display: flex;
+    gap: var(--gap);
+    animation: ticker 15s linear infinite;
+}
+
+
+.primary-button{
+    @apply px-6 py-3 bg-brand_1 text-xl font-semibold tracking-tighter rounded-2xl shadow-inner border border-black/10 text-brand_4 hover:scale-105 transition-all
+}
+
+.secondary-button{
+    @apply px-6 py-3 bg-white text-xl font-semibold tracking-tighter rounded-2xl shadow-inner border border-black/10 text-brand_4 hover:scale-105 transition-all
+}
+
+.tag{
+    @apply bg-brand_1/30 w-fit px-3 py-1 rounded-lg text-brand_4 uppercase font-semibold flex gap-2 text-brand_4
+}
+
+
+
+.icons{
+    background: linear-gradient(129.69deg, #3dfca948 0%, #e6f51489 47%, #fea1016f 100%);
+  }
+
+.icons2{
+    background: linear-gradient(129.69deg, #3dfca948 0%, #e6f51489 47%, #fea1016f 100%);
+  }
+  
+.icons3{
+    border: 1px solid rgba(0, 0, 0, 0.114);
+    font-size: large;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(129.69deg, #9dffd5 0%, #f9ffab 47%, #ffdfa7 100%);
+    width: 50px;
+    height: 50px;
+    border-radius: 1rem;
+    transition: 500ms all;
+
+    &:hover{
+        scale: 110%;
+        transition: 500ms all;
+    }
+  }
+
+.icons{
+    @apply p-3 w-fit rounded-xl border border-brand_4/10
+  }
+
+.icons2{
+    @apply px-3 py-1 w-fit rounded-xl border border-brand_4/10
+  }
+
+.highlight{
+    @apply bg-gradient-to-t to-[#2ab97b] from-[#95e792] text-transparent bg-clip-text
+}  
+
+.ri-circle-fill{
+    @apply text-brand_4
+}
